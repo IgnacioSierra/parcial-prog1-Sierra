@@ -1,7 +1,7 @@
 from validaciones import cargar_nombre, cargar_entero
 from procesamientos import (buscar_mejor_promedio, buscar_peor_promedio, buscar_posicion, 
-contar_alumnos_segun_condicion ,crear_lista, calcular_promedios, calcular_promedio_general, contar_vocales,
-mostrar_datos,mostrar_datos_individual, invertir_str, ordenamiento_burbuja)
+contar_alumnos_segun_condicion ,crear_lista, calcular_promedios, calcular_promedio_general, cargar_datos,
+contar_vocales,mostrar_datos,mostrar_datos_individual, invertir_str, ordenamiento_burbuja)
 
 while True:
     print("\n===== NOTAFÁCIL =====")
@@ -20,13 +20,16 @@ while True:
         case "1":
             print("Cargar alumnos")
             cantidad_alumnos = cargar_entero(1, 30, 'Ingrese cantidad de alumnos que desea cargar: ')
+            
             lista_alumnos = crear_lista("", cantidad_alumnos)
             notas_parcial_1 = crear_lista(None, cantidad_alumnos)
             notas_parcial_2 = crear_lista(None, cantidad_alumnos) 
+            cargar_datos(lista_alumnos, notas_parcial_1, notas_parcial_2)
+            
+            promedios = crear_lista(None, cantidad_alumnos)
+            calcular_promedios(promedios, notas_parcial_1, notas_parcial_2)
         case "2":
             print("Mostrar listado")
-            promedios = crear_lista(None, cantidad_alumnos)
-            calcular_promedios(promedios, notas_parcial_1, notas_parcial_2, cantidad_alumnos)
             mostrar_datos(lista_alumnos, notas_parcial_1, notas_parcial_2, promedios)
         case "3":
             print("Mostrar estadísticas")

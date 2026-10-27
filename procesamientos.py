@@ -47,7 +47,7 @@ def calcular_promedios(lista_promedio:list, notas_1:list, notas_2:list, cant_not
     Return:
         None
     '''
-    for i in range(cant_notas):
+    for i in range(len(lista_promedio)):
         lista_promedio[i] = (notas_1[i] + notas_2[i]) / cant_notas
 
 
@@ -204,7 +204,6 @@ def contar_vocales(cadena:str, vocales:str='aeiouAEIOU')->int:
     
     return contador    
 
-print(contar_vocales('Ignacio'))
 
 def invertir_str(cadena:str)->str:
     '''
