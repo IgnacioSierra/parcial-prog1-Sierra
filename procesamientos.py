@@ -34,7 +34,7 @@ def cargar_datos(nombres:list, notas_1:list, notas_2:list)->None:
         notas_2[i] = cargar_entero(1, 10, 'Ingrese nota parcial 2: ')
 
 
-def calcular_promedios(lista_promedio:list, notas_1:list, notas_2:list, cant_notas:int)->None:
+def calcular_promedios(lista_promedio:list, notas_1:list, notas_2:list, cant_notas:int=2)->None:
     '''
     Calcula y guarda los promedios de los alumnos en una nuevva lista.
 
@@ -185,10 +185,9 @@ def buscar_posicion(lista:list, objetivo:any)->int:
 
 
 #6
-def contar_vocales(cadena:str, vocales:str='aeiou')->int:
+def contar_vocales(cadena:str, vocales:str='aeiouAEIOU')->int:
     '''
     Cuenta las vocales que aparecen en una cadena.
-
     Args:
         cadena: texto donde se buscan las vocales.
         vocales: vocales que se van a contar.
@@ -204,6 +203,8 @@ def contar_vocales(cadena:str, vocales:str='aeiou')->int:
                 break
     
     return contador    
+
+print(contar_vocales('Ignacio'))
 
 def invertir_str(cadena:str)->str:
     '''
