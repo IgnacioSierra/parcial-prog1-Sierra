@@ -3,6 +3,7 @@ from procesamientos import (buscar_mejor_promedio, buscar_peor_promedio, buscar_
 contar_alumnos_segun_condicion ,crear_lista, calcular_promedios, calcular_promedio_general, cargar_datos,
 contar_vocales,mostrar_datos,mostrar_datos_individual, invertir_str, ordenamiento_burbuja)
 
+bandera_carga = False
 while True:
     print("\n===== NOTAFÁCIL =====")
     print('''
@@ -15,6 +16,7 @@ while True:
     0. Salir''')
 
     opcion = input("Seleccione una opción: ")
+
 
     match opcion:
         case "1":
